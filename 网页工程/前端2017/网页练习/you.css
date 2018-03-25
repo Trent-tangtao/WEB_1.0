@@ -1,0 +1,44 @@
+body{
+    width: 1510px;
+}
+
+.head {
+    height: 83px;
+    width: 338px;
+    position: absolute;
+    left:300px;
+    top:70px;
+}
+.bd{
+background: url("http://mail.dlut.edu.cn/coremail/index_data.jsp?ts=1420737020000&key=customer_background_img0");
+    position: relative;
+    margin: 160px 300px;
+    width: 1200px;
+    height: 420px;
+    background-repeat: no-repeat;
+}
+.copy{
+    color:#969696;
+   text-align: right;
+}
+.foot{
+    width: 950px;
+    height: 35px;
+    margin: -145px auto 0;
+}
+.deng{
+    border: 1px solid;
+    width: 280px;
+    height: 380px;
+    background-color: rgba(244,244,244,1);
+    position: relative;
+    margin: auto;
+    top:18px;
+}
+.header{
+font-family:黑体;
+}
+form{
+    display: inline-block;
+    float: right;
+}

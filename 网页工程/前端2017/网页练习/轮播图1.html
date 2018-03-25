@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图片轮播代码</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+</head>
+<style type="text/css">
+    body{max-width: 640px;margin: 0 auto;}
+    #lun ul li:not(:first-child){display: none;}
+</style>
+
+<body>
+<div id="lun">
+    <ul>
+        <li><img src="t/1.jpg"  width="790px" height="340px"> </li>
+        <li><img src="t/2.jpg"  width="790px" height="340px"></li>
+        <li><img src="t/3.jpg"  width="790px" height="340px"></li>
+        <li><img src="t/4.jpg"  width="790px" height="340px"></li>
+    </ul>
+</div>
+<script type="text/javascript">
+    //因为使用了document，所以js需要放在需要执行的代码下面生效才能生效
+    var li=document.getElementById('lun').getElementsByTagName("li");
+    var num=0;
+    var len=li.length;
+
+    setInterval(function(){
+        li[num].style.display="none";
+        num=++num==len?0:num;
+        li[num].style.display="inline-block";
+
+    },2000);//切换时间
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            background-color: #cccccc;}
+        #canvas{
+            background-color:white;
+            display:block;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" height="480px" width="480px"></canvas>
+</body>
+<script>
+    var icounter=1;
+    //绘制棋盘
+    var canvas=document.getElementById("canvas");
+    var ctx=canvas.getContext("2d");
+    for(var i=1;i<=15;i++)
+    {
+        ctx.beginPath();
+        ctx.moveTo(30*i,30);
+        ctx.lineTo(30*i,450);
+        ctx.strokeStyle="black";
+        ctx.stroke();
+    }
+    for(var i=1;i<=15;i++)
+    {
+        ctx.beginPath();
+        ctx.moveTo(30,30*i);
+        ctx.lineTo(450,30*i);
+        ctx.strokeStyle="black";
+        ctx.stroke();
+    }
+    //给棋盘加坐标
+    var arr=new Array(15);
+    for(var x=0;x<15;x++)
+    {
+        arr[x]=Array(15);
+    }
+    for(var m=0;m<15;m++)
+    {
+        for(var n=0;n<15;n++)
+        {
+            arr[m][n]=0;
+        }
+    }
+    //定义落棋子函数
+    function ionclick(e) {
+        //判断棋子落点坐标
+        var zb=e||event;
+        var x=zb.clientX - canvas.getBoundingClientRect().left;
+        var y=zb.clientY - canvas.getBoundingClientRect().top;
+        if(x%30>15)
+        {
+            x=x+30-(x%30);
+        }
+        else
+        {
+            x=x-(x%30);
+        }
+        if(y%30>15)
+        {
+            y=y+30-(y%30);
+        }
+        else
+        {
+            y=y-(y%30);
+        }
+        //黑子下
+        if(icounter%2!=0)
+        {
+            ctx.beginPath();
+            ctx.arc(x,y,15,Math.PI*2,false);
+            ctx.strokeStyle="black";
+            ctx.fillStyle="black";
+            ctx.fill();
+            ctx.stroke();
+            arr[y/30-1][x/30-1]=1;
+        }
+        //白子下
+        else
+        {
+            ctx.beginPath();
+            ctx.arc(x,y,15,Math.PI*2,false);
+            ctx.strokeStyle="black";
+            ctx.fillStyle="white";
+            ctx.fill();
+            ctx.stroke();
+            arr[y/30-1][x/30-1]=2;
+        }
+        icounter++;
+        //判断黑子是否赢
+        for(var i=0;i<15;i++)
+        {
+            var inumber=0;
+            for(var j=0;j<11;j++)
+            {
+                if(arr[i][j]==1)
+                {
+                    inumber++;
+                }
+              //  else{inumber=0;}
+            }
+            if(inumber>=5)
+            {
+                alert("you win!");
+                break;
+            }
+            inumber=0;
+        }
+        for(var j=0;j<15;j++)
+        {
+            var inumber=0;
+            for(var i=0;i<11;i++)
+            {
+                if(arr[i][j]==1)
+                {
+                    inumber++;
+                }
+               //  else{inumber=0;}
+            }
+            if(inumber>=5)
+            {
+                alert("black win!");
+                break;
+            }
+        }
+    }
+    addEventListener("click",ionclick);
+</script>
+</html>

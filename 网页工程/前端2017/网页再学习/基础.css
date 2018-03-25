@@ -1,0 +1,52 @@
+.first{
+    color:red;
+}
+#second{
+    color:blue;
+}
+body{
+    font-weight: bold;/*加粗显示*/
+    font-family:Verdana,Geneva,Arial,sans-serif;/*从往后依次搜索所要使用的字体*/
+}
+a{
+    text-decoration: none;
+    border: black outset 3px;
+    text-align: center;
+    text-indent: 20px;
+    line-height: normal;
+    padding: 5px;
+
+}
+
+table,tr,th,td{
+    border: black solid 1px;
+    border-collapse: collapse;/*共享一条边界*/
+    padding: 3px;
+}
+table{
+    width: 100%;/*填满整个浏览器的宽度*/
+}
+
+article{
+    -webkit-column-count: 3;/*定义分栏数*/
+    -webkit-column-gap: 21px;
+    -webkit-column-rule-width:1px;
+    -webkit-column-rule-style:solid;
+
+    -moz-column-count: 3;
+    -moz-column-gap: 21px;
+
+    column-count: 3;
+    column-gap: 31px;
+    /*以防在某个浏览器无法工作*/
+}
+h1,footer{
+    text-align: center;
+    -webkit-column-span: all;
+    column-span:all;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding: 5px;
+}

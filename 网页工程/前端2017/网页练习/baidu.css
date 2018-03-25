@@ -1,0 +1,87 @@
+body{
+    width: 1510px;
+}
+.bd{
+    width: 100%;
+    text-align:center;
+    padding-top: 90px;
+}
+#butt{
+    background:#3388ff;
+    height:48px;
+    width:100px;
+    margin-left: -5px;
+    color: azure;
+}
+form{
+    width: 100%;
+    text-align: center;
+}
+input{
+    width: 600px;
+    height: 38px;
+    font-size:18px;
+}
+.sou{
+    position: absolute;
+    display: inline-block;
+    margin-left:-130px;
+    margin-top: 11px;
+    height: 16px;
+    width: 18px;
+}
+p{
+    text-align: center;
+}
+.er{
+    text-align: center;
+}
+.head{
+     float:right;
+    margin-right: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 15px;
+}
+.wei{
+    text-align: center;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 15px;
+    font-family: Arial;
+}
+  .wei a{
+    color: #969696;
+}
+  .head a{
+      color:black;
+  }
+  .lian {
+      float:right;
+      margin-right: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      font-size: 15px;
+      background: dodgerblue;
+      font-family: 华文宋体;
+  }
+
+  .lian a{
+      color: white;
+      text-decoration:none;
+  }
+
+  .yin{
+      width: 107px;
+      height: 865px;
+      position: absolute;
+      right:0;
+      top:40px;
+  }
+.yin img{
+    opacity: 0;
+}
+.yin img:hover{
+    opacity: 1;
+    transition: 0.5s;
+}

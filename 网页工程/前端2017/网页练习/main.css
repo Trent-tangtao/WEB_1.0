@@ -1,0 +1,101 @@
+body {
+    background: url("t/1.png");
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: aquamarine;
+}
+p{
+    color:#F0F0F0;
+    text-align: left;
+    text-indent: 2em;
+    line-height: 2em;
+}
+span{
+    font-size: larger;
+    color: dodgerblue;
+}
+img{
+    width: 150px;
+    height: 200px;
+}
+h2{
+    font-size: 50px;
+    color: greenyellow;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#content{width: 900px;
+    margin: auto;
+}
+.mask {
+    color:red;
+    font-size: 70px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    font-family: cursive;
+    border-radius:18px;
+}
+.view {
+    background-color: rgba(1,1,3,0.7);
+    height: 700px;
+    width: 900px;
+    font-size: 18px;
+    border:2px solid blue;
+    text-align: center;
+    border-radius:18px;
+
+}
+.view2 {
+    background-color: rgba(1,1,3,0.7);
+    height: 700px;
+    width: 900px;
+    font-size: 18px;
+    border:2px solid blue;
+    text-align: center;
+    border-radius:18px;
+}
+.view1 {
+    height: 700px;
+    width: 900px;
+    font-size: 18px;
+    border:2px solid black;
+    text-align: center;
+    background:url(t/5.jpg);
+    background-size: 100% 100%;
+    color: darkorange;
+    border-radius:18px;
+}
+#lift{
+    position: fixed;
+    top:100px;
+    left:80px;
+    border: 1px solid black;
+}
+
+#lift ul li{
+    width: 40px;
+    font-size: 18px;
+    color:white;
+    text-align: center;
+    padding:8px 2px;
+    border-bottom: 1px solid white;
+    background-color: #787878;
+}
+#lift ul .lift-item:hover{
+    background-color: red;
+}
+table tr th{
+    border:2px solid black;
+}
+.view img {
+    transition: 0.3s;
+}
+.view img:hover {
+    transform:  rotate(720deg)  scale(0);
+}

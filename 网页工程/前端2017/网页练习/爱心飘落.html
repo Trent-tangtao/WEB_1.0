@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>love</title>
+    <style>
+        body{margin: 0}
+        .wrap{
+            width: 500px;
+            height: 500px;
+            margin: 100px auto 0;
+            border: 3px red solid;
+        background: url("t/0.jpg");
+            background-size: 100% 100%;
+        }
+        .content{
+            width: 340px;
+            height: 300px;
+            margin: 100px auto 0;
+        }
+        .left-h, .right-h{
+            width: 170px;
+            height: 300px;
+            float: left;
+        }
+        .left-h>div, .right-h>div{
+            height: 34px;
+        }
+        .left-h>div>div{
+            width: 30px;
+            height: 30px;
+            background: url("t/6.jpg");
+            background-size: 100% 100%;
+            float: right;
+            margin: 2px;
+        }
+        .right-h>div>div{
+            width: 30px;
+            height: 30px;
+            background: url("t/6.jpg");
+            background-size: 100% 100%;
+            float: left;
+            margin: 2px;
+        }
+
+      /*  .heart{
+            position: relative;
+            display: none;
+            width:365px;
+            height: 320px;
+            margin: 110px 0 0 47px;
+            text-align: center;
+            transform: scale(1);
+            animation: 1600ms pulsate infinite alternate ease-in-out;
+        }
+        .heart-l,.heart-r{
+
+        }*/
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- <div class="heart">
+        <div class="heart-l">shumu</div>
+        <div class="heart-r">shumu</div>
+        <img src="t/3.jpg" alt=""
+width="193" height="173"/>-->
+
+        <div class="content">
+        <div class="left-h">
+            <div style="padding-right: 68px">
+                <div></div>
+                <div></div>
+            </div>
+            <div style="padding-right: 34px">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="right-h">
+            <div style="padding-left: 34px">
+                <div></div>
+                <div></div>
+            </div>
+            <div >
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<script src="js/jquery-1.12.1.min.js"></script>
+<script>
+    var index=0;
+    $(".content div>div>div").each(function (i) {
+        $(this).css({
+            position:"relative",
+            top:"-200px",
+            opacity:0
+        })
+        var wait=Math.floor(Math.random()*3000);
+             $(this).delay(wait).animate({
+                 top:0,
+                 opacity:1
+                 },1000,function () {index++;
+               /*  console.log(index);*/
+                 if(index==46){
+                     $(".content").animate({opacity:0},1000)
+                 }
+             })
+    });
+</script>
+</body>
+</html>
