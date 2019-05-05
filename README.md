@@ -1,2 +1,2 @@
 # WEB_1.0
-简单前后端
+Simple website ： html，css，nodejs，JavaScript
